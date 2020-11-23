@@ -103,6 +103,7 @@ before_script:
   - sudo cp st2tests/st2tests/fixtures/ssl_certs/ca/ca_certificate_bundle.pem /etc/rabbitmq/ca_certificate_bundle.pem
   - sudo cp st2tests/st2tests/fixtures/ssl_certs/server/server_certificate.pem /etc/rabbitmq/server_certificate.pem
   - sudo cp st2tests/st2tests/fixtures/ssl_certs/server/private_key.pem /etc/rabbitmq/private_key.pem
+  - sudo chown -R rabbitmq:rabbitmq /etc/rabbitmq/
   # Install rabbitmq_management RabbitMQ plugin
   - sudo service rabbitmq-server restart ; sleep 5
   - sudo rabbitmq-plugins enable rabbitmq_management
